@@ -1,0 +1,29 @@
+﻿USB-TMC 仪器控制器工程文件说明
+
+usbtmc_gui_ctrl.py
+    PyQt5 主程序。通过 PyVISA 和 SCPI 控制数字万用表、信号发生器和示波器，并通过 Wincom 与测试机交换任务及回读结果。
+
+usbtmc_gui_ctrl_build.py
+    Windows 打包入口。检查打包环境和依赖，调用 PyInstaller 生成 dist\USBTMC_Controller.exe，并复制 dmm_config.json 到 dist。可选调用 Inno Setup 生成安装包。
+
+dmm_config.json
+    数字万用表配置。保存设备匹配信息、默认通信超时、日志级别及各测量模式的默认量程和参数。
+
+USBTMC_Controller.spec
+    PyInstaller 构建配置。指定主程序入口、单文件 GUI EXE 的名称，以及需要收集的 Python 依赖和 Libs 资源。
+
+setup.iss
+    Inno Setup 安装脚本。将打包后的 EXE、DMM 配置和 Libs 纳入安装包，配置快捷方式，并将安装包输出到 new_installer。
+
+Libs\
+    存放 Wincom 运行库。
+    pywincom.cp313-win_amd64.pyd 是用于 Windows x64 和 CPython 3.13 的原生扩展，提供测试机连接、任务轮询和结果回传接口。
+
+LICENSE.txt
+    软件许可文件，说明程序的授权使用条款。
+
+.git\
+    Git 仓库元数据，保存版本历史、索引和仓库配置。
+
+说明.txt
+    本文件，记录精简工程中各文件和目录的用途。

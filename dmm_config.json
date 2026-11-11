@@ -1,0 +1,41 @@
+{
+    "instruments": [
+        {
+            "name": "Keysight_34461A",
+            "vid": "0x2A8D",
+            "pid": "0x1301",
+            "serial": null,
+            "description": "Keysight 34461A 6.5位数字万用表"
+        }
+    ],
+    "measurement": {
+        "default_timeout": 5000,
+        "default_nplc": 1,
+        "log_level": "INFO",
+        "auto_connect": true
+    },
+    "measurement_modes": {
+        "dcv": {
+            "range": "AUTO",
+            "nplc": 1
+        },
+        "acv": {
+            "range": "AUTO",
+            "bandwidth": "DEF"
+        },
+        "dci": {
+            "range": "AUTO",
+            "nplc": 1
+        },
+        "aci": {
+            "range": "AUTO"
+        },
+        "res": {
+            "range": "AUTO",
+            "nplc": 10
+        },
+        "freq": {
+            "range": "AUTO"
+        }
+    }
+}
