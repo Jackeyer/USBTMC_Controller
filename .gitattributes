@@ -1,0 +1,1 @@
+usb_drivers/*.exe filter=lfs diff=lfs merge=lfs -text
